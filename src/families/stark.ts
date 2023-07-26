@@ -28,4 +28,4 @@ export function createStarkTree(): Person {
   return { name: "Rickard", children: rickardsChildren };
 }
 
-console.log(createStarkTree());
+// console.log(createStarkTree());
