@@ -8,7 +8,7 @@ import {
   buildAllPeopleInTreeWithQueue,
 } from "./treeBuilding";
 import { logAllPeopleInTree, logAllPeopleInTreeWithQueue } from "./treeLogging";
-import { findInTree } from "./treeUtils";
+import { findInTree, isDescendant } from "./treeUtils";
 import { printBanner } from "./utils/bannerUtils";
 import { printPersonTreeAsAscii } from "./utils/toAsciiTree";
 
@@ -39,7 +39,8 @@ async function mainProgram() {
   // console.log(buildAllPeopleInTreeWithQueue(createBritishSuccessionTree()).length)
   // console.log(buildAllPeopleInTreeWithQueue(createBritishSuccessionTree()))
 
-  console.log(findInTree("michael angelo", createStarkTree()));
+  // console.log(findInTree("michael angelo", createStarkTree()));
+  console.log(isDescendant("Arya", "Rickard", createStarkTree()));
 }
 
 mainProgram();
