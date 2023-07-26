@@ -9,3 +9,15 @@ export function findInTree(targetName: string, topOfTree: Person): boolean {
   }
   return false;
 }
+
+export function isDescendant(
+  descendantName: string,
+  ancestorName: string,
+  topOfTree: Person,
+): boolean {
+  let ancestor: Person = topOfTree;
+  topOfTree.children.forEach((child) =>
+    child.name === ancestorName ? (ancestor = child) : null,
+  );
+  return treeBuilding(ancestor).includes(descendantName);
+}
